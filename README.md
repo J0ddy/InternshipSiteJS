@@ -22,8 +22,8 @@ The website is built using the following technologies:
 ## Getting Started
 To set up the project on your local machine, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/yourusername/intern-progress-tracker.git`
-2. Navigate to the project directory: `cd intern-progress-tracker`
+1. Clone the repository: `git clone https://github.com/J0ddy/InternshipSiteJS/tree/main.git`
+2. Navigate to the project directory: `cd InternshipSiteJS`
 3. Open the `index.html` file in your preferred web browser.
 
 You should now be able to access and interact with the Intern Progress Tracker web application.
