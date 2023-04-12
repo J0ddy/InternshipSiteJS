@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship System</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/dash.css">
+</head>
+
+<body>
+    <main>
+        <div id="alerts"></div>
+        <header>
+            <h1>Internship List </h1>
+            <span id="gh-repo"><a href="https://r.jod.gg/internshipsitejs" target="_blank" rel="noopener">View on GitHub</a></span>
+        </header>
+
+        <div class="table-container">
+            <div class="table" id="dataTable">
+                <!-- Table Titles -->
+                <div class="fixed-column" id="table-titles">
+                    <div class="table-cell">Intern</div>
+                    <div class="table-cell image-cell-title">Image</div>
+                    <div class="table-cell">Telephone</div>
+                    <div class="table-cell">Email</div>
+                    <div class="table-cell">Start Date</div>
+                    <div class="table-cell">Due Date</div>
+                    <div class="table-cell">Day(s) left</div>
+                    <div class="table-cell">Task 1</div>
+                    <div class="table-cell">Task 2</div>
+                    <div class="table-cell">Department</div>
+                    <div class="table-cell">Mentor</div>
+                    <div class="table-cell">Task 1 Result</div>
+                    <div class="table-cell">Task 2 Result</div>
+                    <div class="table-cell">Attached Files</div>
+                </div>
+                <!-- Table Data -->
+            </div>
+        </div>
+        <div id="table-add-intern">
+            <button id="btnAddIntern" class="btn-primary" onclick="window.location='/add-intern'">Add Intern</button>
+        </div>
+    </main>
+    <div id="modal"><div class="modal-content"><span class="close" id="modal-close">𝘅</span><img class="modal-image" id="image-modal-img"></div>
+    <script src="./src/js/app.js"></script>
+    <script type="text/javascript">
+    loadInterns();
+    registerListeners();
+    </script>
+</body>
+
+</html>

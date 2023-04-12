@@ -1,0 +1,143 @@
+.table-container {
+    overflow-x: scroll;
+    height: 100%;
+    margin: 1rem;
+}
+
+
+
+.table {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    min-width: 100%;
+    padding: 10px;
+}
+.table-cell {
+    padding: 10px;
+}
+
+.scrollable-columns .table-cell {
+    border-bottom: 1px solid #efefef80;
+}
+
+.scrollable-columns .table-cell:last-child {
+    border-bottom: none;
+}
+
+.fixed-column {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background-color: #f4f4f4;
+    text-align: right;
+    margin: 8px;
+    border-radius: 16px 0 0 16px;
+    border: 4px solid #cacaca80;
+}
+
+.fixed-column .table-cell {
+    border-bottom: 1px solid transparent;
+}
+
+.scrollable-columns {
+    background-color: #fff;
+    margin: 8px;
+    border-radius: 16px;
+    border: 1px solid #cacaca80;
+    transition: all 200ms linear;
+    transition: width 1s ease-in-out;
+}
+
+.scrollable-columns:hover {
+    box-shadow: 0 0 10px #cacaca80;
+    transition: all 200ms linear;
+    transform: scale(1.01);
+    
+}
+
+#table-add-intern {
+    text-align: center;
+}
+
+#table-add-intern h3 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hover-right:hover {
+    text-align: right;
+}
+
+.accent-on-hover {
+    display: inline-block;
+    transition: all 200ms linear;
+    color: #e3e3e3;
+}
+
+.scrollable-columns:hover .accent-on-hover {
+    display: inline-block;
+    transition: all 200ms linear;
+    color: #6cbd6e;
+    transform: scale(1.1);
+}
+
+.image-cell {
+    text-align: center;
+}
+
+.intern-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    -webkit-user-drag: none;
+}
+
+.image-cell-title {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+#btnAddIntern {
+    margin: 1rem 35vw;
+    padding: 1rem 2.5rem;
+    min-width: max-content;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+#dataTable {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.edit-icon {
+    float: right;
+    margin-right: 0.2em;
+}
+
+.task-images-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}

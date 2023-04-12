@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship System ⎯ Edit Intern</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/action.css">
+</head>
+<body>
+    <main>
+        <div id="alerts"></div>
+        <header>
+            <h1>Edit Intern</h1>
+        </header>
+        <form action="javascript:editIntern();" id="actionForm">
+            <input type="hidden" name="id" id="id">
+            <div class="input">
+                <label for="image-file">Image</label>
+                <input type="file" name="image" id="image-file" accept="image/jpg">
+                <div id="image-container" style="display: none;"><img id="intern-image"></div>
+                <button type="button" class="button btn-danger btn-sm" onclick="removeInternImage();" id="btnRemoveInternImage">Remove</button>
+            </div>
+            <div class="input">
+                <label for="name">Intern Name</label>
+                <input type="text" name="name" id="name" placeholder="John Doe">
+            </div>
+            <div class="input">
+                <label for="telephone">Telephone</label>
+                <input type="tel" name="telephone" id="telephone" placeholder="+359 123 456 789">
+            </div>
+            <div class="input">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="john@example.com">
+            </div>
+            <div class="input">
+                <label for="start-date">Start Date</label>
+                <input type="date" name="start-date" id="start-date">
+            </div>
+            <div class="input">
+                <label for="end-date">End Date</label>
+                <input type="date" name="end-date" id="end-date">
+            </div>
+            <div class="input">
+                <label for="days-left">Days Left</label>
+                <input type="number" name="days-left" id="days-left" placeholder="Automatically calculated" title="Automatically calculated" inputmode="numeric" min="0" readonly aria-readonly="true">
+            </div>
+            <div class="input">
+                <label for="first-task">First Task</label>
+                <select id="first-task" name="first-task" required>
+                    <option value="Task 1">Task 1</option>
+                    <option value="Task 2">Task 2</option>
+                    <option value="Task 3">Task 3</option>
+                    <option value="Task 4">Task 4</option>
+                    <option value="Task 5">Task 5</option>
+                </select>
+            </div>
+            <div class="input">
+                <label for="second-task">Second Task</label>
+                <select id="second-task" name="second-task" required>
+                    <option value="Task 1">Task 1</option>
+                    <option value="Task 2">Task 2</option>
+                    <option value="Task 3">Task 3</option>
+                    <option value="Task 4">Task 4</option>
+                    <option value="Task 5">Task 5</option>
+                </select>
+            </div>
+            <div class="input">
+                <label for="department">Department</label>
+                <select id="department" name="department" disabled>
+                    <option value="Web Department">Web Department</option>
+                    <option value="Database Department">Database Department</option>
+                    <option value="Support Department">Support Department</option>
+                </select>
+            </div>
+            <div class="input">
+                <label for="mentor">Mentor</label>
+                <input type="text" name="mentor" id="mentor" placeholder="Enter mentor">
+            </div>
+            <div class="input">
+                <label for="first-task-result">First Task Result</label>
+                <input type="text" name="first-task-result" id="first-task-result" placeholder="Enter first task result">
+            </div>
+            <div class="input">
+                <label for="second-task-result">Second Task Result</label>
+                <input type="text" name="second-task-result" id="second-task-result" placeholder="Enter second task result">
+            </div>
+            <div class="input">
+                <label for="task-images">Task Images</label>
+                <input type="file" name="task-images" id="task-images" accept="image/jpg" multiple>
+                <div id="task-images-container" style="display: none;"></div>
+            </div>
+
+            <div class="action">
+                <button type="button" class="button btn-secondary" onclick="window.location='/'">Cancel</button>
+                <button type="submit" id="actionBtn" class="button btn-primary">Save Changes</button>
+                <button type="button" onclick="removeIntern();" id="removeBtn" class="button btn-danger">Remove</button>
+            </div>
+        </form>
+    </main>
+    <div id="modal"><div class="modal-content"><span class="close" id="modal-close">𝘅</span><img class="modal-image" id="image-modal-img"></div>
+<script src="../src/js/app.js"></script>
+<script type="text/javascript">
+loadInternDataToForm();
+registerFormListeners();
+registerListeners();
+</script>
+</body>
+</html>
