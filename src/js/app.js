@@ -319,7 +319,6 @@ function deleteInternToDB(id) {
  *                  The string is the error message if the data is invalid and null if not.
  */
 function validateData(intern, isEdit = false) {
-    console.log(intern);
     if (validateEmail(intern.email) === false) {
         return [false, 'Invalid Email!'];
     }
@@ -674,8 +673,6 @@ function actionFromUrlListener() {
                 if (urlParams.get('status') === 'success') {
                   const id = urlParams.get('id');
                   const intern = getInternFromDB(id);
-                  console.log(id);
-                  console.log(intern);
                   if (intern===null) throw new Error("Intern not found in database");
                   showAlert(`Intern ${intern.internName} edited successfully`, 'success');
                   window.history.replaceState({}, document.title, "/" );
